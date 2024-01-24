@@ -1,4 +1,5 @@
 <!-- calling header component with its selector -->
-
-<app-header />
-<app-notes-list />
+<form (ngSubmit)="showName()">
+  <input type="text" [(ngModel)]="name" name="name" />
+  <input type="submit" value="Submit" />
+</form>
