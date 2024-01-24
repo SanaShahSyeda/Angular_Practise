@@ -10,4 +10,5 @@ import { HeaderComponent } from './header/header.component';
 })
 export class AppComponent {
   title = 'Angular_Practise';
+  logedIn = true;
 }
