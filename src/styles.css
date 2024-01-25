@@ -27,3 +27,11 @@ body {
   color: gray;
   font-size: 10pt;
 }
+
+input.ng-valid {
+  background-color: green;
+}
+
+input.ng-invalid {
+  background-color: red;
+}
