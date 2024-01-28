@@ -2,8 +2,6 @@
 <!-- ngForm directive (e.g. #myForm="ngForm"), then access the state using
 myForm.form.valid. -->
 
-<form [formGroup]="loginForm" (ngSubmit)="login()">
-  <p><input type="text" formControlName="username" /></p>
-  <p><input type="text" formControlName="password" /></p>
-  <p><input type="submit" value="Submit" [disabled]="!loginForm.valid" /></p>
-</form>
+<app-header />
+<app-add-note />
+<app-notes-list />

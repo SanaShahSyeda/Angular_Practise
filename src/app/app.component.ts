@@ -10,18 +10,20 @@ import {
 } from '@angular/forms';
 
 import { NotesListComponent } from './notes-list/notes-list.component';
+import { AddNoteComponent } from './add-note/add-note.component';
 @Component({
   selector: 'app-root',
   standalone: true,
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.css',
   imports: [
     FormsModule,
     RouterOutlet,
     HeaderComponent,
     NotesListComponent,
     ReactiveFormsModule,
+    AddNoteComponent,
   ],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css',
 })
 export class AppComponent {
   loginForm = new FormGroup({
