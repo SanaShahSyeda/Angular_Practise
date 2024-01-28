@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { FormControl } from '@angular/forms';
 import { RouterOutlet } from '@angular/router';
-import { ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
+import {
+  FormsModule,
+  ReactiveFormsModule,
+  FormGroup,
+  FormControl,
+} from '@angular/forms';
 
 import { NotesListComponent } from './notes-list/notes-list.component';
 @Component({
@@ -20,9 +23,14 @@ import { NotesListComponent } from './notes-list/notes-list.component';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  name = new FormControl('James');
+  loginForm = new FormGroup({
+    username: new FormControl(''),
+    password: new FormControl(''),
+  });
 
-  showName() {
-    alert(this.name.value);
+  login() {
+    alert(
+      this.loginForm.value.username + ' | ' + this.loginForm.value.password
+    );
   }
 }
