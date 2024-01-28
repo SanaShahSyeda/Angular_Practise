@@ -5,5 +5,5 @@ myForm.form.valid. -->
 <form [formGroup]="loginForm" (ngSubmit)="login()">
   <p><input type="text" formControlName="username" /></p>
   <p><input type="text" formControlName="password" /></p>
-  <p><input type="submit" value="Submit" /></p>
+  <p><input type="submit" value="Submit" [disabled]="!loginForm.valid" /></p>
 </form>

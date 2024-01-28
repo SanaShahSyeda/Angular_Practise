@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import {
-  FormsModule,
-  ReactiveFormsModule,
   FormGroup,
   FormControl,
+  Validators,
+  FormsModule,
+  ReactiveFormsModule,
 } from '@angular/forms';
 
 import { NotesListComponent } from './notes-list/notes-list.component';
@@ -13,10 +14,10 @@ import { NotesListComponent } from './notes-list/notes-list.component';
   selector: 'app-root',
   standalone: true,
   imports: [
+    FormsModule,
     RouterOutlet,
     HeaderComponent,
     NotesListComponent,
-    FormsModule,
     ReactiveFormsModule,
   ],
   templateUrl: './app.component.html',
@@ -24,8 +25,8 @@ import { NotesListComponent } from './notes-list/notes-list.component';
 })
 export class AppComponent {
   loginForm = new FormGroup({
-    username: new FormControl(''),
-    password: new FormControl(''),
+    username: new FormControl('', Validators.required),
+    password: new FormControl('', Validators.required),
   });
 
   login() {
