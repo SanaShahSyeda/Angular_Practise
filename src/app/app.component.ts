@@ -26,6 +26,7 @@ import { AddNoteComponent } from './add-note/add-note.component';
   ],
 })
 export class AppComponent {
+  [x: string]: any;
   loginForm = new FormGroup({
     username: new FormControl('', Validators.required),
     password: new FormControl('', Validators.required),

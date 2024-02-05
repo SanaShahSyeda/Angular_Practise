@@ -2,12 +2,14 @@ import 'zone.js';
 import { bootstrapApplication } from '@angular/platform-browser';
 import { AppComponent } from './app/app.component';
 import { provideRouter, Routes } from '@angular/router';
-import { HomeComponent } from './app/home/home.component';
-import { ContactsComponent } from './app/contacts/contacts.component';
+import { NotesListComponent } from './app/notes-list/notes-list.component';
+import { AddNoteComponent } from './app/add-note/add-note.component';
+import { NoteDetailComponent } from './app/note-detail/note-detail.component';
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent },
-  { path: 'contacts', component: ContactsComponent },
+  { path: '', component: NotesListComponent },
+  { path: 'new', component: AddNoteComponent },
+  { path: 'note/:id', component: NoteDetailComponent },
 ];
 
 bootstrapApplication(AppComponent, {
