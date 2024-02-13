@@ -1,14 +1,8 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
-import {
-  FormGroup,
-  FormControl,
-  Validators,
-  FormsModule,
-  ReactiveFormsModule,
-} from '@angular/forms';
-
+import { MaterialModule } from './material/material.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NotesListComponent } from './notes-list/notes-list.component';
 import { AddNoteComponent } from './add-note/add-note.component';
 @Component({
@@ -23,18 +17,7 @@ import { AddNoteComponent } from './add-note/add-note.component';
     NotesListComponent,
     ReactiveFormsModule,
     AddNoteComponent,
+    MaterialModule,
   ],
 })
-export class AppComponent {
-  [x: string]: any;
-  loginForm = new FormGroup({
-    username: new FormControl('', Validators.required),
-    password: new FormControl('', Validators.required),
-  });
-
-  login() {
-    alert(
-      this.loginForm.value.username + ' | ' + this.loginForm.value.password
-    );
-  }
-}
+export class AppComponent {}
